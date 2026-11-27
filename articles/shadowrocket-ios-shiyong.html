@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadowrocket小火箭2026完整使用手册：规则模式与延迟优化技巧 - 蓝海加速</title>
+  <meta name="description" content="Shadowrocket小火箭2026完整中文使用手册，详述iOS端节点订阅导入、全局路由配置模式、TCP与CONNECT真实延迟测试、按需连接自动化以及移动端省电优化技巧。">
+  <meta name="keywords" content="Shadowrocket教程,小火箭使用手册,iOS代理配置,小火箭规则模式,延迟优化,蓝海加速">
+  <link rel="canonical" href="https://lanhaijiasu.cfd/articles/shadowrocket-ios-shiyong.html">
+  <meta property="og:title" content="Shadowrocket小火箭2026完整使用手册：规则模式与延迟优化技巧">
+  <meta property="og:description" content="全面掌握iOS端Shadowrocket小火箭的核心配置与高阶路由优化，让苹果设备实现低延迟稳定加速。">
+  <meta property="og:image" content="https://lanhaijiasu.cfd/assets/og-cover.svg">
+  <meta property="og:url" content="https://lanhaijiasu.cfd/articles/shadowrocket-ios-shiyong.html">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Shadowrocket小火箭2026完整使用手册：规则模式与延迟优化技巧",
+    "description": "面向iPhone与iPad用户的Shadowrocket小火箭2026完整配置指南，涵盖订阅导入、分流规则、延迟测试原理与按需连接优化。",
+    "image": "https://lanhaijiasu.cfd/assets/og-cover.svg",
+    "datePublished": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "author": {
+      "@type": "Organization",
+      "name": "蓝海加速技术文档组"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "蓝海加速",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lanhaijiasu.cfd/assets/og-cover.svg"
+      }
+    },
+    "mainEntityOfPage": "https://lanhaijiasu.cfd/articles/shadowrocket-ios-shiyong.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "蓝海加速首页", "item": "https://lanhaijiasu.cfd/" },
+      { "@type": "ListItem", "position": 2, "name": "推荐资讯", "item": "https://lanhaijiasu.cfd/zixun-7k2m.html" },
+      { "@type": "ListItem", "position": 3, "name": "Shadowrocket小火箭2026完整使用手册：规则模式与延迟优化技巧", "item": "https://lanhaijiasu.cfd/articles/shadowrocket-ios-shiyong.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="https://lanhaijiasu.cfd/" class="brand-link">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>蓝海加速</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="../index.html#advantages">核心优势</a>
+        <a href="../index.html#media-ai">流媒体与人工智能</a>
+        <a href="../index.html#download">客户端下载</a>
+        <a href="../index.html#pricing">套餐价格</a>
+        <a href="../index.html#faq">常见问题</a>
+        <a href="../zixun-7k2m.html" class="active">推荐资讯</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="https://lanhaijiasu.cfd/">首页</a> / <a href="../zixun-7k2m.html">推荐资讯</a> / 移动指南</div>
+        <h1>Shadowrocket小火箭2026完整使用手册：规则模式与延迟优化技巧</h1>
+        <div class="page-meta">
+          <span>作者：蓝海加速技术文档组</span>
+          <span>发布时间：2026年11月27日</span>
+          <span>适用设备：iPhone / iPad (iOS & iPadOS)</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-layout">
+      <div class="container prose">
+        <p>在 iOS 与 iPadOS 生态中，Shadowrocket（中文用户习惯亲切地称之为“小火箭”）长期占据着网络代理工具的核心位置。它体积极为轻巧，内存占用低，全面兼容 V2Ray、Trojan、Shadowsocks 等主流加密协议，并提供了细致入微的分流与自动化控制能力。对于希望免去繁琐规则配置的用户，蓝海加速也支持下载海外 Nextin 客户端并联系在线客服获取登录账号直接上手；而如果你已经在 iPhone 或 iPad 上安装了 Shadowrocket，并希望将它的连接稳定性、分流准确度与续航表现调校至最佳状态，本手册将为你提供 2026 年最实用的完整操作指南。</p>
+
+        <h2>一、规范导入订阅链接与自动更新设置</h2>
+        <p>很多新手在使用小火箭时，习惯逐条扫描二维码添加单个节点，这种方式在节点维护或端口升级时非常被动。正确的做法是通过标准订阅地址集中托管全部节点，步骤如下：</p>
+        <ol>
+          <li>登录蓝海加速用户后台，复制专用的通用订阅链接或 Shadowrocket 一键导入链接。</li>
+          <li>打开小火箭首页，点击右上角的加号图标进入“添加节点”界面，将“类型”由默认的单节点协议切换为 <strong>Subscribe（订阅）</strong>。</li>
+          <li>在 URL 栏粘贴刚刚复制的订阅地址，在备注栏填写清晰的名称（如“蓝海加速主力专线”），点击右上角“完成”保存。系统将自动联网拉取全部地区的节点列表，并显示剩余流量与套餐有效期。</li>
+          <li>为了防止节点信息过期，建议立即进入底部导航栏的“设置” -> “订阅”，开启<strong>打开时更新</strong>与<strong>后台自动更新</strong>开关。这样每次启动应用或线路调整时，无需手动反复复制粘贴，节点始终保持最新状态。</li>
+        </ol>
+
+        <h2>二、全局路由核心解析：为什么务必选择“配置”模式</h2>
+        <p>回到小火箭主界面，在顶部连接开关下方有一个极为关键的选项——“全局路由（Global Routing）”。它决定了手机上所有网络请求究竟如何分流，四个内置选项的差异如下：</p>
+<p style="margin:0 0 12px;font-size:0.95rem;color:#5B6B7C;line-height:1.7;">如果您希望省去复杂的手动参数折腾，直接体验晚高峰稳定流畅的跨境网络环境，可直接前往 <a href="https://lanhaijiasu.cfd/" style="color:#1E5F74;font-weight:600;text-decoration:underline;">蓝海加速跨境网络加速</a> 了解官方专属客户端与新人首月 20 元（原价 25 元 8 折）专线方案。</p>
+
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>路由选项</th>
+                <th>实际工作机制</th>
+                <th>推荐使用时机</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>配置（Config）</td>
+                <td>严格按照本地规则文件自动分流：国内直连、海外走代理</td>
+                <td>99% 日常场景的绝对首选，速度与体验最平衡</td>
+              </tr>
+              <tr>
+                <td>代理（Proxy）</td>
+                <td>所有国内与海外流量全部强行绕道海外节点</td>
+                <td>仅在排查某个海外 App 是否被误判为直连时临时验证</td>
+              </tr>
+              <tr>
+                <td>直连（Direct）</td>
+                <td>所有请求直接通过本地网络，仅保留本地统计功能</td>
+                <td>排查本地宽带或蜂窝信号故障时临时使用</td>
+              </tr>
+              <tr>
+                <td>场景（Scene）</td>
+                <td>根据所连接的 Wi-Fi 名称或蜂窝状态自动切换不同节点或直连</td>
+                <td>适合需要在家庭 Wi-Fi 与公司内网之间自动切策略的进阶用户</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>选择“配置”模式后，还应确认底部“配置”标签页中已经启用了最新维护的分流配置文件。优秀的分流规则能够确保国内即时通讯、网购、短视频、导航与网银应用全部毫秒级直连，同时把海外流媒体、学术文献站和人工智能应用精准送入对应专线出口，既省流量又不影响本地软件定位。</p>
+
+        <h2>三、读懂延迟测试：TCP 与 CONNECT 的本质区别</h2>
+        <p>在主界面点击“连通性测试”后，每个节点右侧都会浮现一个绿色或橙色的毫秒数值。但不少用户发现，有时显示 25 ms 的节点打开网页反而很慢，显示 85 ms 的节点却极速秒开。这往往源于测试方式没有调整到位。</p>
+        <p>进入“设置” -> “延迟测试方法”，可以看到小火箭提供了 <strong>TCP</strong> 与 <strong>CONNECT</strong> 两种模式。TCP 模式仅测试手机到中转入口服务器的三次握手耗时，属于“半程延迟”；而 <strong>CONNECT 模式</strong>会通过完整的加密隧道向海外目标地址发起实际握手请求，测出的是真正包含跨境段在内的端到端“真实延迟”。强烈建议所有用户将延迟测试方法切换为 CONNECT，并将测速目标保持为稳定的轻量海外检测地址，这样筛选出来的低延迟节点才是真正快且稳的主力节点。</p>
+
+        <h2>四、高阶稳定性与延迟优化技巧</h2>
+        <h3>1. 开启“按需连接”与网络切换无缝重连</h3>
+        <p>手机用户每天都会在家里 Wi-Fi、地铁 5G 和办公室无线网之间频繁切换。如果未开启自动化保活，网络切换瞬间经常会出现代理隧道假死、网页加载卡住几秒的现象。进入“设置” -> “按需连接”，打开总开关，并在高级设置中合理配置包含所有无线与蜂窝接口的规则。开启后，哪怕从电梯里走出重新搜到 5G 信号，iOS 系统底层也会自动拉起并重建加密隧道，无需手动切回小火箭重新点开关。</p>
+        <h3>2. 善用“故障转移”与“延迟最低”节点调度</h3>
+        <p>小火箭的“设置” -> “代理”中支持“开启转发”及分组自动选线功能。如果你平时不想在晚高峰手动对比哪条香港或新加坡线路更空闲，可以在主页选择对应地区的“自动选择”或开启故障转移策略。当主节点偶尔遇到短暂抖动或例行维护时，客户端会在毫秒级内自动将新连接平滑转移至备用低延迟节点，显著提升语音通话与视频会议的连续性。</p>
+        <h3>3. 合理配置 DNS 防止解析污染与延迟飙升</h3>
+        <p>域名解析慢往往是网页“白屏两秒才开始加载”的罪魁祸首。在“设置” -> “DNS”中，建议开启加密 DNS（如 DoH），并在配置文件中保留国内域名走国内低延迟公共 DNS、海外域名交由远程节点解析的策略。这样既避免了国内网站被解析到海外 CDN 导致变慢，也彻底杜绝了海外域名在本地遭遇 DNS 污染的问题。</p>
+
+        <h2>五、场景模式与多端协同实用玩法</h2>
+        <p>很多老用户虽然每天都在用 Shadowrocket，却从未点开过“全局路由”里的第四个选项——<strong>场景（Scene）</strong>，也忽略了小火箭自带的局域网代理共享功能。其实只要花两分钟配置好这两项功能，iPhone 与 iPad 的使用体验就能再上一个台阶。</p>
+        <h3>1. 场景模式：告别进出家门手动切换开关</h3>
+        <p>如果你家里已经部署了支持透明加速的路由器，或者你希望连接公司内网 Wi-Fi 时自动切换为直连以避免触发内网安全告警，离开公司切回 5G 蜂窝网络时再自动启用专线加速，那么“场景”功能就是为你量身定做的。进入底部“配置”页面或在路由选项中选择“场景”，新增一条针对特定 Wi-Fi 名称（SSID）的规则，将其路由动作设定为“直连”，再把默认的蜂窝网络与其他未知公共 Wi-Fi 设定为“配置”模式并绑定主力专线节点。设置完成后，手机只要回到家或走进办公室，就会全自动无感切换策略，既省电又免去了反复手动开关的麻烦。</p>
+        <h3>2. iPad 与 Mac 跨设备配置快速同步</h3>
+        <p>对于同时拥有 iPhone、iPad 甚至苹果芯片 Mac 的生态用户，不需要在每台设备上重复手动粘贴订阅和调校参数。Shadowrocket 内置了基于 iCloud 的配置同步机制：在“设置”页面找到 iCloud 同步选项并开启后，你在主手机上精心整理好的订阅地址、分流配置文件、延迟测试方法与自定义域名规则都会自动加密同步至同一苹果账号下的其他设备。换新手机时也无需从零开始折腾，打开应用等待几秒即可完整还原熟悉的顺手环境。</p>
+        <h3>3. 搭配苹果“快捷指令”实现特定应用触发</h3>
+        <p>部分用户平时并不习惯全天候挂着代理图标，只希望在打开某款海外社交、学习或流媒体应用时自动开启小火箭，退出应用后再自动关闭。借助 iOS 系统原生的“快捷指令（Shortcuts）”自动化功能，可以轻松创建“当打开指定 App 时 -> 运行 Shadowrocket 开启连接”的自动化流程。配合蓝海加速的秒级握手专线，打开海外应用的同时隧道已在后台完成建立，既保留了日常极简省电的状态，又不耽误任何海外访问需求。</p>
+
+        <h2>六、iOS 端省电与后台内存控制建议</h2>
+        <p>苹果系统对网络扩展进程（Network Extension）设置了严格的内存上限（通常在 50 MB 左右）。如果用户在配置中导入了极其庞大、包含数十万条冗余广告屏蔽规则的超大规则集，就很容易在连续使用几小时后触发 iOS 系统强杀扩展进程，表现为顶部 VPN 图标突然消失断连。</p>
+        <p>为了兼顾超长续航与全天候不掉线，建议遵循四条轻量化准则：第一，选用精简高效的标准分流配置，避免叠加多个重复的去广告模块；第二，在不需要抓包调试时，确保“HTTPS 解密（MITM）”处于关闭状态，因为开启解密会显著增加 CPU 加密解密负载与手机发热；第三，在“设置” -> “UDP 转发”中仅在玩海外联机手游或语音通话时保持开启，日常纯网页阅读环境下适度控制无效后台长连接；第四，定期在“设置”中清理历史流量日志缓存，保持客户端轻快如初。</p>
+
+        <h2>七、外区应用与日常账号安全实用提醒</h2>
+        <p>在 iPhone 与 iPad 上配置代理环境时，账号隔离与系统权限管理同样值得注意。首先，如果需要通过海外商店下载或更新客户端软件，切记只在应用商店（App Store）页面切换账号，<strong>绝对不要在手机系统的“iCloud 设置”中登录陌生或共享账号</strong>，以免引发个人照片通讯录同步错乱或设备锁风险。其次，对于不想折腾海外商店账号的新手用户，直接采用蓝海加速首页推荐的海外 Nextin 客户端方案并联系在线客服获取登录账号，往往比四处寻找第三方共享账号更安全、更省时。最后，日常使用小火箭连接海外社交、金融或人工智能平台时，尽量保持对应节点的地区相对固定，避免几分钟内在香港、日本、美国、欧洲之间来回跳切，这样既能维持稳定的连接速度，也能大幅减少第三方平台的安全验证弹窗。</p>
+
+        <h2>八、常见连接问题快速自检</h2>
+        <p>如果在使用小火箭时遇到节点全部显示“超时”，请先排查以下五点：首先确认手机是否开启了“自动设置时间”，系统时间偏差超过一分钟会导致加密握手直接失败；其次检查流量套餐是否已用尽或订阅链接是否需要重新更新；再次观察是否同时开启了其他系统级加速工具导致本地虚拟网卡冲突；第四检查“全局路由”是否被误切为“直连”或“代理”导致分流异常；最后可以切换 Wi-Fi 与蜂窝数据进行对比，若仅在特定无线网下异常，说明当前路由器存在策略限制，建议参考<a href="https://lanhaijiasu.cfd/diqu-jiance.html" target="_blank">蓝海加速地区代理适用性检测指南</a>进一步定位原因。</p>
+        <p>养成良好的日常维护习惯同样能让小火箭的稳定度倍增：每隔两到三周手动下拉刷新一次节点订阅，确保本地列表与服务端最新专线保持同步；在系统大版本更新（如升级至最新 iOS 版本）后，如遇首次连接无流量，可先在手机“设置 -> 通用 -> VPN 与设备管理”中关闭再重新授权一次小火箭配置。只要底层专线扎实、路由分流清晰，小火箭在苹果移动设备上完全可以做到数月零干预的静默稳定运行。</p>
+
+        <div class="cta-box">
+          <h3>为你的 iPhone 与 iPad 搭配高速纯净的专线节点</h3>
+          <p>蓝海加速全面兼容 Shadowrocket 订阅导入，同时提供海外 Nextin 客户端客服协助方案。主推标准版原价 25 元/月，新人注册 8 折，首月仅需 20 元。</p>
+          <a href="https://cola.flyvaff.com/#/register/?code=ZUwI0gXX" class="btn btn-primary" rel="nofollow" target="_blank">立即注册体验蓝海加速</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">蓝海加速</div>
+        <div class="footer-copy">© 2026 蓝海加速 · 专注稳定高效的全球跨境网络加速服务</div>
+      </div>
+      <nav class="footer-links" aria-label="页脚导航">
+        <a href="../sitemap.html" target="_blank">网站地图</a>
+        <a href="../about.html" target="_blank">关于我们</a>
+        <a href="../terms.html" target="_blank">服务条款</a>
+        <a href="../privacy.html" target="_blank">隐私政策</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
